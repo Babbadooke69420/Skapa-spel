@@ -1,0 +1,60 @@
+import random as rand
+svärd = 5
+pilbåge = 3
+yxa = 8
+
+
+print('skapa din karaktär')
+while True:
+    input('Välj namn på din karaktär ->')
+    break
+while True:
+    kön = input('Välj kön på din karaktär ->')
+    if kön == "man" or kön == "kvinna":
+        break
+print('Alternativen är beige brun och gul')
+while True:
+    färg = input('välj färg på din karaktär->')
+    if färg == "brun" or färg == "beige" or färg == "gul":
+        break
+    else:
+        continue
+print( 'Alternativ, pilbåge, svärd, yxa->')
+print( 'Svärdet gör 5 skada och har 5 i snabbhet')
+print( 'Pilbågen gör 3 i skada och har 7 i snabbhet')
+print( 'Yxan gör 8 i skada och har 2 i snabbhet')
+while True:
+    vapen = input('Välj vapen till din karaktär ->')
+    if vapen == "pilbåge":
+        attack = 3
+        break
+    elif vapen == "svärd":
+        attack = 5
+        break
+    elif vapen == "yxa":
+        attack = 8
+        break
+    else:
+        print("Skriv ett korrekt vapen")
+print('Din karaktär är färdig')
+print(vapen)
+
+
+speed = 10 - attack
+hp_monster = rand.randint(1,10)
+print(f"Monstret har {hp_monster} hp")
+def monster():
+    while True:
+        if attack > hp_monster:
+            print('du besegrar monstret')
+        else:
+            nummer = rand.randint(1, 3)
+            global speed
+            chans_att_fly = rand.randint(1, 10-speed)
+            if chans_att_fly == nummer:
+                print('Du lyckades att fly')
+            else:
+                print('Du förlorade')
+        break
+    
+monster()
