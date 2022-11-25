@@ -39,6 +39,16 @@ while True:
 print('Din karaktär är färdig')
 print(vapen)
 
+landskap = input("Det är dags att välja vart du vill utforska, vill du resa i Italien, I "
+                 "i Egypten, E eller i Kina, K ?  -->  ")
+
+if landskap  == "E":
+    print(" Du valde att resa i Egypten, ett klokt val!")
+elif landskap == "I" :
+    print(" Du valde att resa i Italien, spännande ! ")
+elif landskap == "K":
+    print("Du valde att utforska Kina, en otrolig resa väntar dig")
+
 
 speed = 10 - attack
 hp_monster = rand.randint(1,10)
