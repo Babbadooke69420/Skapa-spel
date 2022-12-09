@@ -113,6 +113,94 @@ def skapa_fälla():
 
 skapa_fälla()
 
+import random as rand
+
+def Hades():
+    Attack = 7
+    Hp = 20
+    Möjligt_Hp = list(range(25, 35))
+    Hades_Hp = rand.choice(Möjligt_Hp)
+    möjlig_skada = list(range(1, 8))
+    print('Du har hamnat i en bossfajt!')
+    print('Du kan välja att fly omedelbart eller att slåss och riskera att dö.')
+    while True:
+        Hades_Hp = Hades_Hp - Attack
+        print(f'Monstret har {Hades_Hp} hp kvar')
+        if Hades_Hp == 0 or Hades_Hp <=0:
+            print('Bra jobbat! Du besegrade Hades och klarade spelet')
+            break
+        else:
+            continue
+        Attack_Hades = rand.choice(möjlig_skada)
+        print(f'Hades gjorde{Attack_Hades} skada')
+        Hp = Hp - Attack_Hades
+        if Hp == 0 or Hp <=0:
+            print('Du dog')
+            print('GAME OVER')
+            break
+        else:
+            continue  
+Hades()
+    
+import random as rand
+
+def indra():
+    Attack = 7
+    Hp = 20
+    Möjligt_Hp = list(range(25, 35))
+    Indra_Hp = rand.choice(Möjligt_Hp)
+    möjlig_skada = list(range(1, 8))
+    print('Du har hamnat i en bossfajt!')
+    print('Du kan välja att fly omedelbart eller att slåss och riskera att dö.')
+    while True:
+        Indra_Hp = Indra_Hp - Attack
+        print(f'Monstret har {Indra_Hp} hp kvar')
+        if Indra_Hp == 0 or Indra_Hp <=0:
+            print('Bra jobbat! Du besegrade Indra och klarade spelet')
+            break
+        else:
+            continue
+        Attack_Indra = rand.choice(möjlig_skada)
+        print(f'Indra gjorde{Attack_Indra} skada')
+        Hp = Hp - Attack_Indra
+        if Hp == 0 or Hp <=0:
+            print('Du dog')
+            print('GAME OVER')
+            break
+        else:
+            continue  
+indra()
+    
+import random as rand
+
+def Sekhmet():
+    Attack = 7
+    Hp = 20
+    Möjligt_Hp = list(range(25, 35))
+    Sekhmet_Hp = rand.choice(Möjligt_Hp)
+    möjlig_skada = list(range(1, 8))
+    print('Du har hamnat i en bossfajt!')
+    print('Du kan välja att fly omedelbart eller att slåss och riskera att dö.')
+    while True:
+        Sekhmet_Hp = Sekhmet_Hp - Attack
+        print(f'Monstret har {Sekhmet_Hp} hp kvar')
+        if Sekhmet_Hp == 0 or Sekhmet_Hp <=0:
+            print('Bra jobbat! Du besegrade Sekhmet och klarade spelet')
+            break
+        else:
+            continue
+        Attack_Sekhmet = rand.choice(möjlig_skada)
+        print(f'Sekhmet gjorde{Attack_Sekhmet} skada')
+        Hp = Hp - Attack_Indra
+        if Hp == 0 or Hp <=0:
+            print('Du dog')
+            print('GAME OVER')
+            break
+        else:
+            continue  
+Sekhmet()
+    
+
 
 
     
