@@ -1,4 +1,11 @@
 import random as rand
+def random_nummer(välj_väg):
+    lst = list(range(1,4))
+    lst = rand.choice(lst)
+    return(lst)
+
+
+import random as rand
 svärd = 5
 pilbåge = 3
 yxa = 8
@@ -67,4 +74,44 @@ def monster():
                 print('Du förlorade')
         break
     
-monster()
+
+while True:
+    välj_väg = input("Vill du gå höger, vänster eller framåt?")
+    if välj_väg == "höger":
+        lst = random_nummer(välj_väg)
+        print(lst)
+        if lst == 1:
+            print()
+        elif lst == 2:
+            print("de")
+        elif lst == 3:
+            print("hejdå")
+    elif välj_väg == "vänster":
+        lst = random_nummer(välj_väg)
+        print(lst)
+        if lst == 1:
+            print("här ska det vara en finktion")
+        elif lst == 2:
+            print("här också")
+        elif lst == 3:
+            print("här med")
+            
+    elif välj_väg == "framåt":
+        lst = random_nummer(välj_väg)
+        print(lst)
+        if lst == 1:
+            print("b")
+        elif lst == 2:
+            print("h")
+        elif lst == 3:
+            print("g")
+
+
+
+
+
+    
+
+        
+
+
