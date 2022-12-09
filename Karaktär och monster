@@ -106,7 +106,12 @@ while True:
         elif lst == 3:
             print("g")
 
+def skapa_fälla():
+    fälla_skada = random.randint(1, 10)
+    print("Helvete, du föll i en fälla och tog skada:", fälla_skada)
+    
 
+skapa_fälla()
 
 
 
