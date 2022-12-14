@@ -113,6 +113,29 @@ def skapa_fälla():
 
 skapa_fälla()
 
+def kista():
+    import random
+
+    Skattkista = ["horn", "sköld", "mat", "kniv", "osynlighetsdryck"]
+
+    sannolikhet = [0.1, 0.3, 0.4, 0.15, 0.05]
+
+    föremål = random.choices(Skattkista, sannolikhet)[0]
+
+    print(f"Du hittade en {föremål}!")
+    if föremål == "horn":
+        print('Hornet kan användas när du möter en boss. Det kallar på en arme av spindlar som gör ganska mycket skada på bossen')
+    elif föremål == "sköld":
+        print('Skölden gör så att du får 5 extra hp. Det kan vara till nytta i alla fajter mot både bossar och monster')
+    elif föremål == "mat":
+        print('Maten hjälper dig att heala upp/fylla på ditt hp om du tagit skada')
+    elif föremål == "kniv":
+        print('Kniven gör så att du gör 3 extra skada. Det kan användas mot både bossen och monster.')
+    elif föremål == "osynlighetsdryck":
+        print('Osynlighetsdrycken gör så att du kan fly från en bossfajt om du håller på att dö. Den är väldigt ovanlig och kan vara till stor nytta.')
+
+kista()
+
 import random as rand
 
 def Hades():
