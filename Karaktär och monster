@@ -378,4 +378,281 @@ def Egypten():
             svar = input("Om du vill möta bossen, tryck ja, j, om inte tryck nej, n ")
                 if svar == "ja" or svar == "j"
                   print('Nu har du valt att starta en bossfajt!')
+                  
+                  
+#############################################################################################################################           
+  Här är samma kod fast annan                
+                  
+                  import random as rand
+def random_nummer(välj_väg):
+    lst = list(range(1,4))
+    lst = rand.choice(lst)
+    return(lst)
+
+
+import random as rand
+svärd = 5
+pilbåge = 3
+yxa = 8
+
+hp = 10
+level = 1
+
+print('skapa din karaktär')
+while True:
+    input('Välj namn på din karaktär ->')
+    break
+while True:
+    kön = input('Välj kön på din karaktär ->')
+    if kön == "man" or kön == "kvinna":
+        break
+print('Alternativen är beige brun och gul')
+while True:
+    färg = input('välj färg på din karaktär->')
+    if färg == "brun" or färg == "beige" or färg == "gul":
+        break
+    else:
+        continue
+print( 'Alternativ, pilbåge, svärd, yxa->')
+print( 'Svärdet gör 5 skada och har 5 i snabbhet')
+print( 'Pilbågen gör 3 i skada och har 7 i snabbhet')
+print( 'Yxan gör 8 i skada och har 2 i snabbhet')
+while True:
+    vapen = input('Välj vapen till din karaktär ->')
+    if vapen == "pilbåge":
+        attack = 3
+        break
+    elif vapen == "svärd":
+        attack = 5
+        break
+    elif vapen == "yxa":
+        attack = 8
+        break
+    else:
+        print("Skriv ett korrekt vapen")
+print('Din karaktär är färdig')
+print(vapen)
+
+landskap = input("Det är dags att välja vart du vill utforska, vill du resa i Italien, I "
+                 "i Egypten, E eller i Kina, K ?  -->  ")
+
+if landskap  == "E":
+    print(" Du valde att resa i Egypten, ett klokt val!")
+elif landskap == "I" :
+    print(" Du valde att resa i Italien, spännande ! ")
+elif landskap == "K":
+    print("Du valde att utforska Kina, en otrolig resa väntar dig")
+
+
+speed = 10 - attack
+def monster():
+
+    hp_monster = rand.randint(1,10)
+    print(f"Monstret har {hp_monster} hp")
+    while True:
+        if attack > hp_monster:
+            (print('du besegrar monstret'))
+            global level
+            level +=1
+            return print("Din nya level", (level))
+        else:
+            nummer = rand.randint(1, 3)
+            global speed
+            chans_att_fly = rand.randint(1, 10-speed)
+            if chans_att_fly == nummer:
+               print('Du lyckades att fly')
+            else:
+                print('Du förlorade, men du lever för att kämpa en annan dag')
+                global hp
+                hp = hp - 2
+                return print("Ditt hp är nu",(hp))
+                
+                       
+        break
+
+def skapa_fälla():
+    fälla_skada = rand.randint(1, 3)
+    print("Helvete, du föll i en fälla och tog skada:", fälla_skada)
+    global hp
+    hp = hp - fälla_skada
+    return(hp)
+
+
+
+
+def kista():
+    import random
+
+    Skattkista = ["horn", "sköld", "mat", "kniv", "osynlighetsdryck"]
+
+    sannolikhet = [0.1, 0.3, 0.4, 0.15, 0.05]
+
+    föremål = random.choices(Skattkista, sannolikhet)[0]
+
+    print(f"Du hittade en {föremål}!")
+    if föremål == "horn":
+        print('Hornet kan användas när du möter en boss. Det kallar på en arme av spindlar som gör ganska mycket skada på bossen')
+    elif föremål == "sköld":
+        print('Skölden gör så att du får 5 extra hp. Det kan vara till nytta i alla fajter mot både bossar och monster')
+    elif föremål == "mat":
+        print('Maten hjälper dig att heala upp/fylla på ditt hp om du tagit skada')
+        global hp
+        hp = hp + 2
+        return("Ditt hp är nu", hp)
+    elif föremål == "kniv":
+        print('Kniven gör så att du gör 3 extra skada. Det kan användas mot både bossen och monster.')
+    elif föremål == "osynlighetsdryck":
+        print('Osynlighetsdrycken gör så att du kan fly från en bossfajt om du håller på att dö. Den är väldigt ovanlig och kan vara till stor nytta.')
+
+
+
+def Hades():
+    Attack = 7
+    Hp = 20
+    Möjligt_Hp = list(range(25, 35))
+    Hades_Hp = rand.choice(Möjligt_Hp)
+    möjlig_skada = list(range(1, 8))
+    print('Du har hamnat i en bossfajt!')
+    print('Du kan välja att fly omedelbart eller att slåss och riskera att dö.')
+    while True:
+        Hades_Hp = Hades_Hp - Attack
+        print(f'Monstret har {Hades_Hp} hp kvar')
+        if Hades_Hp == 0 or Hades_Hp <=0:
+            print('Bra jobbat! Du besegrade Hades och klarade spelet')
+            break
+        else:
+            continue
+        Attack_Hades = rand.choice(möjlig_skada)
+        print(f'Hades gjorde{Attack_Hades} skada')
+        Hp = Hp - Attack_Hades
+        if Hp == 0 or Hp <=0:
+            print('Du dog')
+            print('GAME OVER')
+            break
+        else:
+            continue  
+
+    
+import random as rand
+
+def indra():
+    Attack = 7
+    Hp = 20
+    Möjligt_Hp = list(range(25, 35))
+    Indra_Hp = rand.choice(Möjligt_Hp)
+    möjlig_skada = list(range(1, 8))
+    print('Du har hamnat i en bossfajt!')
+    print('Du kan välja att fly omedelbart eller att slåss och riskera att dö.')
+    while True:
+        Indra_Hp = Indra_Hp - Attack
+        print(f'Monstret har {Indra_Hp} hp kvar')
+        if Indra_Hp == 0 or Indra_Hp <=0:
+            print('Bra jobbat! Du besegrade Indra och klarade spelet')
+            break
+        else:
+            continue
+        Attack_Indra = rand.choice(möjlig_skada)
+        print(f'Indra gjorde{Attack_Indra} skada')
+        Hp = Hp - Attack_Indra
+        if Hp == 0 or Hp <=0:
+            print('Du dog')
+            print('GAME OVER')
+            break
+        else:
+            continue  
+
+    
+import random as rand
+
+def Sekhmet():
+    Attack = 7
+    Hp = 20
+    Möjligt_Hp = list(range(25, 35))
+    Sekhmet_Hp = rand.choice(Möjligt_Hp)
+    möjlig_skada = list(range(1, 8))
+    print('Du har hamnat i en bossfajt!')
+    print('Du kan välja att fly omedelbart eller att slåss och riskera att dö.')
+    while True:
+        Sekhmet_Hp = Sekhmet_Hp - Attack
+        print(f'Monstret har {Sekhmet_Hp} hp kvar')
+        if Sekhmet_Hp == 0 or Sekhmet_Hp <=0:
+            print('Bra jobbat! Du besegrade Sekhmet och klarade spelet')
+            break
+        else:
+            continue
+        Attack_Sekhmet = rand.choice(möjlig_skada)
+        print(f'Sekhmet gjorde{Attack_Sekhmet} skada')
+        Hp = Hp - Attack_Indra
+        if Hp == 0 or Hp <=0:
+            print('Du dog')
+            print('GAME OVER')
+            break
+        else:
+            continue  
+
+    
+
+
+
+
+
+    
+
+
+
+print("Ditt hp är", hp)
+
+while hp > 0:
+    välj_väg = input("Vill du gå höger, vänster eller framåt?")
+    if välj_väg == "höger":
+        lst = random_nummer(välj_väg)
+        print(lst)
+
+        if lst == 1:
+            print(monster())
+            
+
+        elif lst == 2:
+            print(skapa_fälla())
+            
+        elif lst == 3:
+            print(kista())
+
+    elif välj_väg == "vänster":
+        lst = random_nummer(välj_väg)
+        print(lst)
+
+        if lst == 1:
+            print(monster())
+
+        elif lst == 2:
+            print(skapa_fälla())
+
+        elif lst == 3:
+            print(kista())
+            
+
+    elif välj_väg == "framåt":
+        lst = random_nummer(välj_väg)
+        print(lst)
+
+        if lst == 1:
+            print(monster())
+
+        elif lst == 2:
+            print(skapa_fälla())
+
+        elif lst == 3:
+            print(kista())
+
+
+
+
+
+    
+
+        
+
+
+
  
