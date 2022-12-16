@@ -10,6 +10,7 @@ svärd = 5
 pilbåge = 3
 yxa = 8
 
+hp = 10
 
 print('skapa din karaktär')
 while True:
@@ -58,60 +59,33 @@ elif landskap == "K":
 
 
 speed = 10 - attack
-hp_monster = rand.randint(1,10)
-print(f"Monstret har {hp_monster} hp")
 def monster():
+
+    hp_monster = rand.randint(1,10)
+    print(f"Monstret har {hp_monster} hp")
     while True:
         if attack > hp_monster:
-            print('du besegrar monstret')
+            (print('du besegrar monstret'))
         else:
             nummer = rand.randint(1, 3)
             global speed
             chans_att_fly = rand.randint(1, 10-speed)
             if chans_att_fly == nummer:
-                print('Du lyckades att fly')
+               print('Du lyckades att fly')
             else:
-                print('Du förlorade')
+                print('Du förlorade, men du lever för att kämpa en annan dag')
+                
+                       
         break
-    
-
-while True:
-    välj_väg = input("Vill du gå höger, vänster eller framåt?")
-    if välj_väg == "höger":
-        lst = random_nummer(välj_väg)
-        print(lst)
-        if lst == 1:
-            print()
-        elif lst == 2:
-            print("de")
-        elif lst == 3:
-            print("hejdå")
-    elif välj_väg == "vänster":
-        lst = random_nummer(välj_väg)
-        print(lst)
-        if lst == 1:
-            print("här ska det vara en finktion")
-        elif lst == 2:
-            print("här också")
-        elif lst == 3:
-            print("här med")
-            
-    elif välj_väg == "framåt":
-        lst = random_nummer(välj_väg)
-        print(lst)
-        if lst == 1:
-            print("b")
-        elif lst == 2:
-            print("h")
-        elif lst == 3:
-            print("g")
 
 def skapa_fälla():
-    fälla_skada = random.randint(1, 10)
+    fälla_skada = rand.randint(1, 3)
     print("Helvete, du föll i en fälla och tog skada:", fälla_skada)
-    
+    hp -= fälla_skada
+    return(hp)
 
-skapa_fälla()
+
+
 
 def kista():
     import random
@@ -135,8 +109,6 @@ def kista():
         print('Osynlighetsdrycken gör så att du kan fly från en bossfajt om du håller på att dö. Den är väldigt ovanlig och kan vara till stor nytta.')
 
 kista()
-
-import random as rand
 
 def Hades():
     Attack = 7
@@ -163,7 +135,7 @@ def Hades():
             break
         else:
             continue  
-Hades()
+
     
 import random as rand
 
@@ -192,7 +164,7 @@ def indra():
             break
         else:
             continue  
-indra()
+
     
 import random as rand
 
@@ -221,8 +193,62 @@ def Sekhmet():
             break
         else:
             continue  
-Sekhmet()
+
     
+
+
+
+
+
+    
+
+
+
+print("Ditt hp är", hp)
+
+while True:
+    välj_väg = input("Vill du gå höger, vänster eller framåt?")
+    if välj_väg == "höger":
+        lst = random_nummer(välj_väg)
+        print(lst)
+
+        if lst == 1:
+            print(monster())
+
+        elif lst == 2:
+            print(skapa_fälla())
+            print(hp)
+        elif lst == 3:
+            print("hejdå")
+
+    elif välj_väg == "vänster":
+        lst = random_nummer(välj_väg)
+        print(lst)
+
+        if lst == 1:
+            print(monster())
+
+        elif lst == 2:
+            print(skapa_fälla())
+
+        elif lst == 3:
+            print("här med")
+            
+
+    elif välj_väg == "framåt":
+        lst = random_nummer(välj_väg)
+        print(lst)
+
+        if lst == 1:
+            print(monster())
+
+        elif lst == 2:
+            print(skapa_fälla())
+
+        elif lst == 3:
+            print("g")
+
+
 
 
 
