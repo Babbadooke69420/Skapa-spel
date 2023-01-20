@@ -48,8 +48,8 @@ while True:
     else:
         print("Skriv ett korrekt vapen")
 print('Din karaktär är färdig')
-print(vapen)
-
+print(vapen)  
+                                                         #Här får spelaren välja vart hen vill att äventyret ska utspelas
     
 while True:
     landskap = input("Det är dags att välja vart du vill utforska, vill du resa i Italien, I "
@@ -110,11 +110,14 @@ def skapa_fälla():
 
 
 def kista():
+#Funktion för kistan 
     import random
 
     Skattkista = ["horn", "sköld", "mat", "kniv", "osynlighetsdryck"]
+    #De olika föremålen man kan hitta
 
     sannolikhet = [0.1, 0.3, 0.4, 0.15, 0.05]
+    #De olika sanolikheterna för de olika föremålen. 
 
     föremål = random.choices(Skattkista, sannolikhet)[0]
 
@@ -145,6 +148,7 @@ def kista():
         inv.append("Osynlighetsdryck")
         hp = hp + 2
         attack = attack + 2
+#Skriver ut det föremål man hittar lägger det i inven samt ger spelaren stats förstärkningen. 
 
 
     
@@ -154,6 +158,7 @@ def kista():
 import random as rand
 
 def indra():
+#Funktion för bossen. För att vinna spelet måste du vinna över denna boss. 
     Attack = 7
     Hp = 20
     Möjligt_Hp = list(range(25, 35))
@@ -191,7 +196,9 @@ import random as rand
 print("Ditt hp är", hp)
 print("Din level är", level)
 print("Din attack är", attack)
+
 #skriver ut dina stats innan man börjar
+#Här börjar huvudpogrammet
 while True:
     if hp <= 0:
         print("Game over")
